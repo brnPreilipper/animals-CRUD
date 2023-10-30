@@ -1,0 +1,22 @@
+
+.header{
+    height: 80px;
+    border: solid 1px;
+    font-size: 30px;
+}
+.carousel{
+    height: 200px;
+    border: solid 1px;
+    font-size: 25px;
+}
+.itens{
+    height: 70px;
+    border: solid 1px black;
+    color: green;
+    font-size: 20px;
+}
+.footer{
+    height: 200px;
+    border: solid 1px;
+    font-size: 40px;
+}

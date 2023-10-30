@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>CRUD - Animals</title>
+</head>
+
+<body class="text-primary bg-white">
+
+    <main class="container">
+
+        <div class="row">
+            <div class="col-12 pt-5">
+                <h1>Cadastro de animais</h1>
+            </div>
+        </div>
+
+        <div class="row pt-3">
+            <form action="" id="cadastraAnimal">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" id="name" placeholder="Nome do Animal:" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="species" class="form-label">Espécie</label>
+                    <input type="text" id="species" placeholder="Nome da Espécie:" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="color" class="form-label">Cor</label>
+                    <input type="text" class="form-control" id="color" placeholder="Cor do Animal:">
+                </div>
+
+                <div class="mb-3">
+                    <label for="size" class="form-label">Tamanho</label>
+                    <input type="text" class="form-control" id="size" placeholder="Tamanho do Animal:">
+                </div>
+
+                <button type="submit" class="btn btn-success">SALVAR</button>
+            </form>
+        </div>
+
+        <div class="row pt-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>ESPÉCIE</th>
+                        <th>COR</th>
+                        <th>TAMANHO</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody id="carregarAnimais">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/insert.js"></script>
+    <script src="js/get.js"></script>
+    <script src="js/delete.js"></script>
+    <script src="js/edit.js"></script>
+</body>
+
+</html>
