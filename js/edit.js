@@ -1,30 +1,34 @@
-$(function () {
-    
-    $(document).on('click', '#Modal', function () {
+$(document).on('click', '.editarItem', function () {
+    let relValue =  this.getAttribute("rel");
 
-        let idAtu = $('#idAtu').val()
-        let nameAtu = $('#nameAtu').val()
-        let speciesAtu = $('#speciesAtu').val()
-        let colorAtu = $('#colorAtu').val()
-        let sizeAtu = $('#sizeAtu').val()
+    $(document).on('click', '.btnSalvarEdite', function(){
+        let idItem = relValue;
+        let nomeNovo = $('#nomeNovo').val();
+        let especieNovo = $('#especieNovo').val();
+        let corNovo = $('#corNovo').val();
+        let tamanhoNovo = $('#tamanhoNovo').val();
+        console.log(idItem);
 
         let item = {
-            id: idAtu,
-            name: nameAtu,
-            species: speciesAtu,
-            color: colorAtu,
-            size: sizeAtu
+            id: idItem,
+            name: nomeNovo,
+            species: especieNovo,
+            color: corNovo,
+            size: tamanhoNovo
         };
-        console.log(item)
 
-        fetch("http://cafepradev.com.br:21020/animals/update", {
+        fetch("http://cafepradev.com.br:21020/animals/update",{
             method: "PUT",
-            headers: {
+            headers:{
                 "Content-type": "application/json; charset=UTF-8"
             },
-            body: JSON.stringify(item) 
-        })
+            body: JSON.stringify(item)
+        });
+        console.log(item);
+                     
+        setTimeout(function(){
+            location.reload();
+        }, 1000);
     });
-
-return false
+    return false;
 });

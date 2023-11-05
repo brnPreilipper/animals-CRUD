@@ -14,7 +14,7 @@ $(function () {
                 data.forEach(animais => {
                     $('#carregarAnimais').append(`
                     <tr>
-                        <td>${animais.id}</td>
+                        
                         <td>${animais.name}</td>
                         <td>${animais.species}</td>
                         <td>${animais.color}</td>
@@ -23,7 +23,7 @@ $(function () {
                             <a href="#" class="btn btn-danger deletaItem" rel="${animais.id}">D</a>
 
 
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal"
+                            <button type="button" class="btn btn-warning editarItem" rel="${animais.id}" data-bs-toggle="modal" data-bs-target="#Modal"
                                 data-bs-whatever="@getbootstrap">E</button>
 
                             <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel"
@@ -38,36 +38,31 @@ $(function () {
                                         <div class="modal-body">
                                             <form>
                                                 <div class="mb-3">
-                                                    <label for="speciesAtu"
-                                                        class="col-form-label">ID</label>
-                                                    <input type="text" class="form-control" id="idAtu" placeholder="Digite o ID do animal:">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="nameAtu"
+                                                    <label for="nomeNovo"
                                                         class="col-form-label">Nome</label>
-                                                    <input type="text" class="form-control" id="nameAtu" placeholder="Nome do Animal:">
+                                                    <input type="text" class="form-control" id="nomeNovo" placeholder="Nome do Animal:">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="speciesAtu"
+                                                    <label for="especieNovo"
                                                         class="col-form-label">Espécie</label>
-                                                    <input type="text" class="form-control" id="speciesAtu" placeholder="Nome da Espécie:">
+                                                    <input type="text" class="form-control" id="especieNovo" placeholder="Nome da Espécie:">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="colorAtu"
+                                                    <label for="corNovo"
                                                         class="col-form-label">Cor</label>
-                                                    <input type="text" class="form-control" id="colorAtu" placeholder="Cor do Animal:">
+                                                    <input type="text" class="form-control" id="corNovo" placeholder="Cor do Animal:">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="sizeAtu"
+                                                    <label for="alturaNovo"
                                                         class="col-form-label">Tamanho</label>
-                                                    <input type="text" class="form-control" id="sizeAtu" placeholder="Tamanho do Animal:">
+                                                    <input type="text" class="form-control" id="alturaNovo" placeholder="Tamanho do Animal:">
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger"
                                                 data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" class="btn btn-warning">Editar</button>
+                                            <button type="submit" class="btn btnSalvarEdite btn-warning">Editar</button>
                                         </div>
                                     </div>
                                 </div>
